@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle on Canvas</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="400"
+      height="400"
+      style="border: 1px solid black"
+    ></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.moveTo(200, 50);
+      ctx.lineTo(100, 300);
+      ctx.lineTo(300, 300);
+      ctx.closePath();
+      ctx.shadowBlur = 30;
+      ctx.shadowColor = "red";
+      ctx.fillStyle = "aqua";
+      ctx.fill();
+      ctx.strokeStyle = "blue";
+      ctx.stroke();
+    </script>
+  </body>
+</html>

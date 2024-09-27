@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For loop</title>
+    <style>
+      header {
+        background-color: rebeccapurple;
+        background-size: cover;
+        height: 100px;
+        text-align: center;
+        padding: 10px;
+      }
+      .forl {
+        background: linear-gradient(blue, cadetblue);
+        color: white;
+        text-align: center;
+      }
+      .fori {
+        background-color: aqua;
+        font-family: "Courier New", Courier, monospace;
+        text-align: right;
+      }
+      .fore {
+        background-color: blueviolet;
+        width: 100%;
+      }
+      .foro {
+        background: linear-gradient(red, yellow);
+        text-align: center;
+        font-family: sans-serif;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: black">For loop and it's types</h1>
+    </header>
+    <div class="forl">
+      <h2>For loop</h2>
+      <p id="for"></p>
+      <script>
+        const bike = ["Hero", "Honda", "TVS", "Yamaha", "Bajaj"];
+        let i, len, bc;
+        for (i = 0, len = bike.length, bc = "&nbsp;"; i < len; i++) {
+          bc += bike[i] + "&nbsp;";
+        }
+        document.getElementById("for").innerHTML = bc;
+      </script>
+    </div>
+    <section class="fori">
+      <h2>Forin() loop</h2>
+      <p id="forin"></p>
+      <script>
+        const car = { carbrand: "BMW", ownername: "tharun", price: 5000000 };
+        let cb = "";
+        for (let x in car) {
+          cb += car[x] + "<br>";
+        }
+        document.getElementById("forin").innerHTML = cb;
+      </script>
+      <p id="demo"></p>
+
+      <script>
+        const numbers = [1, 4, 9, 16, 25];
+
+        let txt = "";
+        for (let x in numbers) {
+          txt += numbers[x] + " ";
+        }
+
+        document.getElementById("demo").innerHTML = txt;
+      </script>
+    </section>
+    <div class="fore">
+      <h2>Foreach() loop</h2>
+      <p id="foreach"></p>
+      <script>
+        let multiple = [4, 8, 12, 16, 20];
+        let mul = "";
+        multiple.forEach(mulfunction);
+        document.getElementById("foreach").innerHTML = mul;
+        function mulfunction(value, index, array) {
+          mul += array + "&nbsp;";
+        }
+      </script>
+    </div>
+    <section class="foro">
+      <h2>Forof() loop</h2>
+      <p id="forof"></p>
+      <script>
+        let action = "Entertainment";
+        let act = "";
+        for (const y of action) {
+          act += y + "<br>";
+        }
+        document.getElementById("forof").innerHTML = act;
+      </script>
+    </section>
+  </body>
+</html>

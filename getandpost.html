@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New user register form</title>
+    <style>
+      form {
+        padding: 15px;
+        margin: auto;
+        width: 600px;
+        height: auto;
+        background-color: lightgray;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="background: linear-gradient(aqua, cadetblue)">
+      form using http get method
+    </h1>
+    <form action="" method="get">
+      <label for="uname">User name</label> &nbsp; &nbsp;
+      <input type="text" name="uname" id="uname" /> <br /><br />
+      <label for="ps">Password</label>&nbsp; &nbsp;&nbsp; &nbsp;
+      <input type="text" name="ps" id="ps" /><br /><br />
+      <label for=""
+        >Working <br />
+        hours</label
+      >&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+      <input type="radio" name="th" id="th" value="tweleve hours" />
+      <label for="th">Tweleve hours</label>
+      <input type="radio" name="twh" id="twh" value="twenty four hours" />
+      <label for="twh">Twenty four hours</label><br /><br />
+      <label for="">Area of <br />interest</label>&nbsp; &nbsp;&nbsp;
+      &nbsp;&nbsp; &nbsp;
+      <input type="checkbox" name="Operation" id="op" value="operation" />
+      <label for="op">Operation</label>
+      <input type="checkbox" name="Support" id="sp" value="support" />
+      <label for="sp">Support</label><br /><br />
+      <button>Submit</button>
+    </form>
+
+    <br />
+    <h1 style="background: linear-gradient(aqua, cadetblue)">
+      form using http post method
+    </h1>
+    <form action="check.php" method="post">
+      <label for="uname">User name</label> &nbsp; &nbsp;
+      <input type="text" name="uname" id="uname" /> <br /><br />
+      <label for="ps">Password</label>&nbsp; &nbsp;&nbsp; &nbsp;
+      <input type="text" name="ps" id="ps" /><br /><br />
+      <label for=""
+        >Working <br />
+        hours</label
+      >&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+      <input type="radio" name="th" id="th" value="tweleve hours" />
+      <label for="th">Tweleve hours</label>
+      <input type="radio" name="twh" id="twh" value="twenty four hours" />
+      <label for="twh">Twenty four hours</label><br /><br />
+      <label for="">Area of <br />interest</label>&nbsp; &nbsp;&nbsp;
+      &nbsp;&nbsp; &nbsp;
+      <input type="checkbox" name="Operation" id="op" value="operation" />
+      <label for="op">Operation</label>
+      <input type="checkbox" name="Support" id="sp" value="support" />
+      <label for="sp">Support</label><br /><br />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

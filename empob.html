@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee object</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        empname: "Tn",
+        role: "Developer",
+        salary: 56000,
+      };
+      person.name = function () {
+        return this.salary;
+      };
+      document.getElementById("demo").innerHTML =
+        "Tn gets a salary of " + person.name();
+    </script>
+  </body>
+</html>

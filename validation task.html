@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>validation</title>
+    <style>
+      body {
+        background: linear-gradient(blue, aqua);
+        background-repeat: no-repeat;
+      }
+      form {
+        padding: 15px;
+        margin: auto;
+        width: 600px;
+        height: auto;
+        background-color: lightgray;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="uname">User name</label> &nbsp; &nbsp;
+      <input type="text" name="uname" id="uname" value="tn" /> <br /><br />
+      <label for="ps">Password</label>&nbsp; &nbsp;&nbsp; &nbsp;
+      <input type="password" name="ps" id="ps" required /><br /><br />
+      <label for="fd">field</label
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        type="text"
+        name="fd"
+        id="fd"
+        value="information technology"
+        disabled
+      /><br /><br />
+      <label for="an">aadhar number</label>
+      <input type="text" name="an" id="an" maxlength="12" /><br /><br />
+      <label for="phone">Phone number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        pattern="[0-9]{4}[0-9]{2}[0-9]{4}"
+      /><br /><br />
+      <label for="points">CIBIL Score</label>&nbsp;&nbsp;&nbsp;
+      <input type="number" id="points" name="points" step="5" /><br /><br />
+      <label for="dn">Designation</label> &nbsp;&nbsp;&nbsp;
+      <input list="dn" name="dn" />
+      <datalist id="dn">
+        <option value="Operation"></option>
+        <option value="Support"></option>
+        <option value="Designer"></option>
+        <option value="Developer"></option>
+        <option value="Others"></option>
+      </datalist>
+      <br /><br />
+      <button>submit</button>
+    </form>
+    <br />
+    <form autocomplete="on">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+          We'll never share your email with anyone else.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+      .head {
+        padding: 0;
+        margin: 0;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        position: relative;
+        color: hsl(0, 0%, 68%);
+        font-weight: bold;
+        font-family: "Anonymous Pro", monospace;
+        letter-spacing: 7px;
+        overflow: hidden;
+        border-right: 2px solid hsl(0, 0%, 80%);
+        white-space: nowrap;
+        animation: typewriter 4s steps(30) 1s 1 normal both,
+          blinkTextCursor 500ms infinite;
+      }
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 900px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: hsl(0, 0%, 80%);
+        }
+        to {
+          border-right-color: transparent;
+        }
+      }
+      p {
+        font-style: italic;
+        background: linear-gradient(red, yellow);
+        text-align: center;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1>Array of items using splice() method</h1>
+    </div>
+    <script>
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      arr.splice(5, 3);
+      console.log(arr);
+    </script>
+    <p><b>See the console of the browser</b></p>
+    <br />
+    <div class="head">
+      <h1>Array of items using slice() method</h1>
+    </div>
+    <p id="array"></p>
+    <script>
+      let alpha = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+      ];
+      let bet = alpha.slice(4, 8);
+      document.getElementById("array").innerHTML = bet;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Min Max</title>
+  </head>
+  <body>
+    <h1>Minimum and Maximum of array</h1>
+    <p>see the console of the browser</p>
+    <script>
+      let num = [5, 10, 15, 20, 25, 30, 35, 40];
+      console.log(`Minimum no:${Math.min(...num)}`);
+      console.log(`Maximum no:${Math.max(...num)}`);
+      console.log(`Ascending order:${[...num].sort((a, b) => a - b)}`);
+      console.log(`Descending order:${[...num].sort((a, b) => b - a)}`);
+    </script>
+  </body>
+</html>

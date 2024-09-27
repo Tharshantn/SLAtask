@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>logic programs</title>
+    <style>
+      h1 {
+        background: #33cccc;
+        animation: color 9s infinite linear;
+        text-align: center;
+        font-family: "Kavoon", sans-serif;
+        font-size: 2.5em;
+        color: white;
+      }
+      @keyframes color {
+        0% {
+          background: #33cccc;
+        }
+        20% {
+          background: #33cc36;
+        }
+        40% {
+          background: #b8cc33;
+        }
+        60% {
+          background: #fcca00;
+        }
+        80% {
+          background: #33cc36;
+        }
+        100% {
+          background: #33cccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Logic behind string trim() function</h1>
+    <script>
+      function removeWhitespace(str) {
+        let start = 0;
+        let end = str.length - 1;
+
+        while (start <= end && str[start] === " ") {
+          start++;
+        }
+
+        while (start <= end && str[end] === " ") {
+          end--;
+        }
+
+        let newStr = "";
+        for (let i = start; i <= end; i++) {
+          newStr += str[i];
+        }
+
+        return newStr;
+      }
+
+      let originalStr = "      Hello World   ";
+      let trimmedStr = removeWhitespace(originalStr);
+
+      document.write("Original String:", originalStr);
+
+      document.write("<br> Trimmed String:", trimmedStr);
+    </script>
+    <br />
+    <h1>Logic behind string replace() function</h1>
+    <script>
+      function replaceString(str, pattern, replacement, all) {
+        let result = "";
+        let index = 0;
+
+        while (index < str.length) {
+          if (str.substring(index, index + pattern.length) === pattern) {
+            if (all) {
+              result += replacement;
+              index += pattern.length;
+            } else {
+              result += replacement;
+              break;
+            }
+          } else {
+            result += str[index];
+            index++;
+          }
+        }
+
+        result += str.substring(index);
+
+        return result;
+      }
+
+      let str = "Hello world, this is my new world!";
+      let pattern = "world";
+      let replacement = "earth";
+
+      document.write(replaceString(str, pattern, replacement));
+      document.write("<br>" + replaceString(str, pattern, replacement, true));
+    </script>
+  </body>
+</html>

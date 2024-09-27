@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
+<title>CLOCK</title>
+        <style>
+            header {
+  background-color: #000000;
+}
+
+#clock { 
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(ellipse at center,  #0a2e38  0%, #000000 50%);
+   text-shadow: 0 0 20px rgba(10, 175, 230,  1),  0 0 20px rgba(10, 175, 230, 1);
+  color: #daf6ff; 
+  font-size: 60px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+        </style>
+      </head>
+      <body>
+        <header>
+        <div id="clock">
+          <p id="time"></p>
+        </div>
+    </header>
+        <script>
+         function displayTime() {
+    const date = new Date();
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    
+    const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+
+   
+    const formattedMinutes = minutes.toString().padStart(2, '0');
+    const formattedSeconds = seconds.toString().padStart(2, '0');
+
+   
+    const timeString = `${formattedHours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
+    document.getElementById('time').innerText = timeString;
+}
+
+setInterval(displayTime, 1000);
+
+displayTime();
+
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

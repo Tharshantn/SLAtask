@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background: linear-gradient(green, purple);
+      }
+      header {
+        background-color: cadetblue;
+        background-size: cover;
+        height: 100px;
+        text-align: center;
+        padding: 10px;
+      }
+      p {
+        color: white;
+      }
+      .if {
+        background-color: palevioletred;
+      }
+      .switch {
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: black">Greetings using ifelse and switch case</h1>
+    </header>
+
+    <h1 class="if">Using if else</h1>
+    <p id="hour" style="color: white"></p>
+    <script>
+      const time = new Date().getHours();
+      let greeting;
+      if (time < 10) {
+        greeting = "Good morning";
+      } else if (time < 16) {
+        greeting = "Good day";
+      } else if (time < 20) {
+        greeting = "Good evening";
+      } else {
+        greeting = "Good night";
+      }
+      document.getElementById("hour").innerHTML = greeting;
+    </script>
+    <br />
+    <h1 class="switch">using switch case</h1>
+    <script>
+      let hour = new Date().getHours();
+      switch (true) {
+        case hour >= 5 && hour < 12:
+          console.log("Good Morning!");
+          break;
+        case hour >= 12 && hour < 16:
+          console.log("Good Afternoon!");
+          break;
+        case hour >= 16 && hour < 20:
+          console.log("Good Evening!");
+          break;
+        default:
+          console.log("Good Night!");
+          break;
+      }
+    </script>
+    <p>See the console of the browser</p>
+    <br /><br />
+    <header>
+      <h1 style="color: black">Day using ifelse and switch case</h1>
+    </header>
+    <h1 class="switch">using switch case</h1>
+    <script>
+      let day;
+      switch (new Date().getDay()) {
+        case 0:
+          day = "Sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+      }
+      console.log(day);
+    </script>
+    <p>See the console of the browser</p>
+    <br />
+    <h1 class="if">Using if else</h1>
+    <p id="day" style="color: white"></p>
+    <script>
+      const daynum = new Date().getDay();
+      let dayweek;
+      if (daynum == 0) {
+        dayweek = "Sunday";
+      } else if (daynum == 1) {
+        dayweek = "Monday";
+      } else if (daynum == 2) {
+        dayweek = "Tuesday";
+      } else if (daynum == 3) {
+        dayweek = "Wednesday";
+      } else if (daynum == 4) {
+        dayweek = "Thursday";
+      } else if (daynum == 5) {
+        dayweek = "Friday";
+      } else if (daynum == 6) {
+        dayweek = "Saturday";
+      }
+      document.getElementById("day").innerHTML = dayweek;
+    </script>
+  </body>
+</html>

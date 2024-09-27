@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>train</title>
+    <style>
+      h1 {
+        font-family: sans-serif;
+        background-color: darkcyan;
+        background-size: cover;
+        text-align: center;
+        height: 60px;
+        padding: 50px;
+      }
+      form {
+        padding: 15px;
+        margin: auto;
+        width: 600px;
+        height: auto;
+        background-color: lightgray;
+        border-radius: 10px;
+      }
+      button {
+        background: linear-gradient(red, blue);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: cadetblue">TRAIN TICKET BOOKING APPLICATION FORM</h1>
+    <form action="">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" value="abinaya" /><br /><br />
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" value="tn" /><br /><br />
+      <label for="">Gender</label>&nbsp; &nbsp;
+      <input type="radio" name="gender" id="me" value="male" />
+      <label for="me">Male</label>
+      <input type="radio" name="gender" id="fem" value="female" />
+      <label for="fem">Female</label><br />
+      <br />
+      <label for="dob"
+        >Date of <br />
+        birth</label
+      >
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="date" name="dob" id="dob" />
+      <br />
+      <br />
+      <label for="mail">Mail i'd</label>&nbsp;&nbsp;&nbsp;
+      <input type="email" name="mail" id="mail" value="tn@gmail.com" />
+      <br />
+      <br />
+      <label for="add">Address</label>&nbsp;&nbsp;&nbsp;&nbsp;
+      <textarea name="address" id="add">
+5,4th cross, gandhinagar, sundarapuram, coimbatore-24.</textarea
+      ><br />
+      <br />
+      <label for="num"
+        >Phone <br />
+        number</label
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" name="number" id="num" value="1234567890" /><br />
+      <br />
+      <label for="fm">From</label>
+      <input type="text" id="fm" name="from" value="coimbatore" /> &nbsp;
+      <label for="to">To</label>
+      <input type="text" id="to" name="to" value="trichy" /><br /><br />
+      <label for="tn">train name</label>
+      <input
+        type="text"
+        id="tn"
+        name="train name"
+        value="semmozhi express 12064"
+      /><br /><br />
+      <label for="np">No.of <br />passengers</label>
+      <input type="text" id="np" name="np" value="2" /><br /><br />
+      <label for="class">Class Type</label>
+      <input type="checkbox" name="2s" id="2s" value="Second sitting" />
+      <label for="2s">Second sitting</label>
+      <input type="checkbox" name="Sleeper" id="sleep" value="Sleeper" />
+      <label for="sleep">Sleeper</label>
+      <input type="checkbox" name="3a" id="3a" value="Third AC" />
+      <label for="3a">Third AC</label>
+      <input type="checkbox" name="2a" id="2a" value="Second AC" />
+      <label for="2a">Second AC</label>
+      <input type="checkbox" name="1a" id="1a" value="First AC" />
+      <label for="1a">First AC</label> <br />
+      <br />
+      <button>Book Ticket</button>
+    </form>
+  </body>
+</html>

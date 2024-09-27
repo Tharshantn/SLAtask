@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while</title>
+    <style>
+      .head {
+        padding: 0;
+        margin: 0;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        color: hsl(0, 0%, 28%);
+        font-size: 50px;
+        font-weight: bold;
+        font-family: monospace;
+        letter-spacing: 7px;
+        cursor: pointer;
+      }
+
+      h1 span {
+        transition: 0.5s ease-out;
+      }
+      h1:hover span:nth-child(1) {
+        margin-right: 5px;
+      }
+      h1:hover span:nth-child(2) {
+        margin-left: 30px;
+      }
+      h1:hover span {
+        color: #fff;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head">
+      <h1><span>While </span><span>Loop</span></h1>
+    </div>
+    <script>
+      let i = 1;
+      while (i <= 10) {
+        console.log(i);
+        i++;
+      }
+    </script>
+    <p style="font-family: 'Times New Roman', Times, serif">
+      <strong>See the console of the browser</strong>
+    </p>
+    <div class="head">
+      <h1><span>Do While </span><span>Loop</span></h1>
+    </div>
+    <p id="number"></p>
+    <script>
+      let z = 1;
+      let num = " ";
+      do {
+        num += "&nbsp;" + z;
+        z++;
+      } while (z < 10);
+      document.getElementById("number").innerHTML = num;
+    </script>
+  </body>
+</html>
