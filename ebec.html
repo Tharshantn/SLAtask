@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EBEC</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inner-container">
+        <button id="button">Click me!</button>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementById("container");
+      const innerContainer = document.getElementById("inner-container");
+      const button = document.getElementById("button");
+
+      console.log("Event Bubbling:");
+      button.addEventListener("click", () => console.log("Button clicked"));
+      innerContainer.addEventListener("click", () =>
+        console.log("Inner container clicked")
+      );
+      container.addEventListener("click", () =>
+        console.log("Container clicked")
+      );
+
+      console.log("\nEvent Capturing:");
+      button.addEventListener(
+        "click",
+        () => console.log("Button captured"),
+        true
+      );
+      innerContainer.addEventListener(
+        "click",
+        () => console.log("Inner container captured"),
+        true
+      );
+      container.addEventListener(
+        "click",
+        () => console.log("Container captured"),
+        true
+      );
+    </script>
+  </body>
+</html>

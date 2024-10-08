@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function armstrong(num) {
+        const strNum = num.toString();
+        const n = strNum.length;
+        let sum = 0;
+
+        for (let i = 0; i < n; i++) {
+          const digit = parseInt(strNum[i]);
+          sum += Math.pow(digit, n);
+        }
+
+        return sum === num;
+      }
+
+      const userInput = prompt("Enter a number:");
+
+      if (userInput === null || userInput.trim() === "") {
+        alert("Please enter a valid number.");
+      } else {
+        const num = parseInt(userInput);
+
+        if (isNaN(num) || num < 0) {
+          alert("Please enter a positive integer.");
+        } else {
+          const result = armstrong(num);
+
+          if (result) {
+            alert(num + " is an Armstrong number.");
+          } else {
+            alert(num + " is not an Armstrong number.");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
